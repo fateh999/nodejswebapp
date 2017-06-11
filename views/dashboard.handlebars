@@ -1,0 +1,94 @@
+<div class="container-fluid" style="background-color: transparent;margin-top: -19px;height:100vh;">
+      <div class="row">
+        <div class="col-sm-3">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="togglesidebar">
+          <ul class="nav nav-sidebar"  style="padding-top: 70px">
+            <li class="active"><a data-toggle="tab" href="#showService">Services</a></li>
+            <li><a data-toggle="tab" href="#yourServices">Your Services</a></li>
+            <li><a data-toggle="tab" href="#addnewservice">Add Services</a></li>
+          </ul>
+         </div>
+        </div>
+		
+
+        <div class="col-sm-9">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#togglesidebar" style="margin-top: -1px">
+				<span class="icon-bar" style="background-color: black"></span>
+				<span class="icon-bar" style="background-color: black"></span>
+				<span class="icon-bar" style="background-color: black"></span>
+		</button>
+          <h2>Dashboard</h2>
+		<div class="tab-content">
+		  <div class="tab-pane fade in active" id="showService">
+			{{#each result}}
+   			 <div class="thumbnail">
+      		<p class="col-xs-6"><b>Service Name :</b></p>
+      		<p class="text-primary col-xs-6">{{this.serviceName}}</p>
+        	<p class="col-xs-6"><b>Seller's Name :</b></p>
+        	<p class="text-primary col-xs-6">{{this.name}}</p>
+        	<p class="col-xs-6"><b>Seller's email :</b></p>
+        	<p class="text-primary col-xs-6"> {{this.email}}</p>
+        	<p class="col-xs-6"><b>Price :</b></p>
+        	<p class="text-success col-xs-6"> Rs.{{this.price}}</p>
+        	<p class="col-xs-12"><b>Service Description : </b></p>
+          	<hr>
+        	<div class="caption" style="padding-left: 40px;padding-right:40px;"">
+          	<p class="text-primary">{{this.serviceDesc}}</p>
+        	</div>
+    		</div>
+  			{{/each}}
+		  </div>
+
+		  <div class="tab-pane fade" id="yourServices">
+		  {{#each result}}
+   			 <div class="thumbnail">
+      		<p class="col-xs-6"><b>Service Name :</b></p>
+      		<p class="text-primary col-xs-6">{{this.serviceName}}</p>
+        	<p class="col-xs-6"><b>Seller's Name :</b></p>
+        	<p class="text-primary col-xs-6">{{this.name}}</p>
+        	<p class="col-xs-6"><b>Seller's email :</b></p>
+        	<p class="text-primary col-xs-6"> {{this.email}}</p>
+        	<p class="col-xs-6"><b>Price :</b></p>
+        	<p class="text-success col-xs-6"> Rs.{{this.price}}</p>
+        	<p class="col-xs-12"><b>Service Description : </b></p>
+          	<hr>
+        	<div class="caption" style="padding-left: 40px;padding-right:40px;"">
+          	<p class="text-primary">{{this.serviceDesc}}</p>
+        	</div>
+    		</div>
+  			{{/each}}
+		  </div>
+
+		  <div class="tab-pane fade" id="addnewservice">
+					<form action="/dashboard" method="POST" role="form">
+					{{#if errors}}
+					{{#each errors}}
+					<div class="alert alert-danger">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					{{msg}}
+					</div>
+					{{/each}}
+					{{/if}}
+				
+					<div class="form-group">
+						<input type="hidden" class="form-control" name="name" value="{{user.name}}">
+					</div>
+					<div class="form-group">
+						<input type="hidden" class="form-control" name="email" value="{{user.email}}">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="serviceName" placeholder="Service Name">
+					</div>
+					<div class="form-group">
+					    <textarea class="form-control" name="serviceDesc" cols="30" rows="10" placeholder="Service Description"></textarea>
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" name="price" placeholder="Price">
+					</div>
+				
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+		  </div>
+   	    </div>
+      </div>
+</div>

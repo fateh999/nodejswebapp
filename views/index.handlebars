@@ -1,0 +1,28 @@
+<div class="jumbotron text-center" id="homeBg">
+	<div class="container" id="homeContent">
+		<h1 id="mainHead"><b>Explore the Marketplace</b></h1>
+		<br>
+		<br>
+		<br>
+		<br>
+		{{#if user}}
+    	
+		{{else}}
+		<a href="/users/register" class="btn btn-primary">Join Us</a>
+		<a href="/users/login" class="btn btn-success">Log In</a>
+		{{/if}}
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		{{#if user}}
+		<a href="/dashboard"><i class="fa fa-angle-double-down" style="font-size:48px;color: white;"></i></a>
+		{{else}}
+		{{/if}}
+	</div>
+</div>

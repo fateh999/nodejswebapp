@@ -1,0 +1,60 @@
+#homeBg{
+  /*background: #d3959b; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to right, #d3959b, #bfe6ba); /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to right, #d3959b, #bfe6ba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: url(/image/bgi.jpg);
+  background-size: cover;
+  height:100vh;
+  width: 100%;
+  display: table;
+  margin-top: -19px;
+}
+
+#loginDiv,#registerDiv{
+  background-color: transparent;
+  height:100vh;
+  width: 100%;
+  display: table;
+}
+
+#homeContent,#loginContent,#registerContent{
+	display: table-cell;
+  vertical-align: middle;
+}
+
+#mainHead{
+	color: white;
+}
+
+ body{
+  background-color: #ccc;
+  font-family: 'Raleway', sans-serif;
+}
+
+.form-control::-webkit-input-placeholder { color: #727375; }
+.form-control:-moz-placeholder { color: #727375; }
+.form-control::-moz-placeholder { color: #727375; }
+.form-control:-ms-input-placeholder { color: #727375; }
+
+
+/* Dashboard CSS
+
+.sidebar {
+  padding-top: 65px;
+  display: block;
+}
+ */
+
+ p{
+  word-wrap: break-word;
+ }
+
+.nav-sidebar>.active>a ,.nav-sidebar>.active>a :hover,.nav-sidebar>.active>a :focus{
+    color: white !important;
+    background-color: #3a79af !important;
+}
+
+.nav-sidebar>li>a:hover{
+    color: white;
+    background-color: #3a79af;
+}

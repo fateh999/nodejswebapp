@@ -1,0 +1,29 @@
+<div class="jumbotron text-center" id="registerDiv">
+	<div class="container" id="registerContent">
+	<form class="col-sm-offset-4 col-sm-4" action="/users/register" method="POST" role="form">
+
+		<h2 class="text-center"><b>Register Form</b></h2>
+		{{#if errors}}
+			{{#each errors}}
+				<div class="alert alert-danger">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				{{msg}}
+				</div>
+			{{/each}}
+		{{/if}}
+		<div class="form-group">
+			<input type="text" class="form-control" name="name" placeholder="Name" >
+		</div>
+	
+		<div class="form-group">
+			<input type="email" class="form-control" name="email" placeholder="e-mail" >
+		</div>
+		
+		<div class="form-group">
+			<input type="password" class="form-control" name="pass" placeholder="Password">
+		</div>
+	
+		<button type="submit" class="btn btn-primary">Register</button>
+	</form>
+</div>
+</div>

@@ -4,7 +4,6 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse" id="togglesidebar">
           <ul class="nav nav-sidebar"  style="padding-top: 70px">
             <li class="active"><a data-toggle="tab" href="#showService">Services</a></li>
-            <li><a data-toggle="tab" href="#yourServices">Your Services</a></li>
             <li><a data-toggle="tab" href="#addnewservice">Add Services</a></li>
           </ul>
          </div>
@@ -21,40 +20,17 @@
 		<div class="tab-content">
 		  <div class="tab-pane fade in active" id="showService">
 			{{#each result}}
-   			 <div class="thumbnail">
-      		<p class="col-xs-6"><b>Service Name :</b></p>
-      		<p class="text-primary col-xs-6">{{this.serviceName}}</p>
-        	<p class="col-xs-6"><b>Seller's Name :</b></p>
-        	<p class="text-primary col-xs-6">{{this.name}}</p>
-        	<p class="col-xs-6"><b>Seller's email :</b></p>
-        	<p class="text-primary col-xs-6"> {{this.email}}</p>
-        	<p class="col-xs-6"><b>Price :</b></p>
-        	<p class="text-success col-xs-6"> Rs.{{this.price}}</p>
-        	<p class="col-xs-12"><b>Service Description : </b></p>
-          	<hr>
-        	<div class="caption" style="padding-left: 40px;padding-right:40px;"">
-          	<p class="text-primary">{{this.serviceDesc}}</p>
-        	</div>
-    		</div>
-  			{{/each}}
-		  </div>
-
-		  <div class="tab-pane fade" id="yourServices">
-		  {{#each result}}
-   			 <div class="thumbnail">
-      		<p class="col-xs-6"><b>Service Name :</b></p>
-      		<p class="text-primary col-xs-6">{{this.serviceName}}</p>
-        	<p class="col-xs-6"><b>Seller's Name :</b></p>
-        	<p class="text-primary col-xs-6">{{this.name}}</p>
-        	<p class="col-xs-6"><b>Seller's email :</b></p>
-        	<p class="text-primary col-xs-6"> {{this.email}}</p>
-        	<p class="col-xs-6"><b>Price :</b></p>
-        	<p class="text-success col-xs-6"> Rs.{{this.price}}</p>
-        	<p class="col-xs-12"><b>Service Description : </b></p>
-          	<hr>
-        	<div class="caption" style="padding-left: 40px;padding-right:40px;"">
-          	<p class="text-primary">{{this.serviceDesc}}</p>
-        	</div>
+   			<div class="thumbnail col-xs-12 col-lg-12 col-sm-12 col-md-12">
+      		<p class="col-xs-6 col-lg-6 col-sm-6 col-md-6"><b>Service Name :</b></p>
+      		<p class="text-primary col-xs-6 col-lg-6 col-sm-6 col-md-6">{{this.serviceName}}</p>
+        	<p class="col-xs-6 col-lg-6 col-sm-6 col-md-6"><b>Seller's Name :</b></p>
+        	<p class="text-primary col-xs-6 col-lg-6 col-sm-6 col-md-6">{{this.name}}</p>
+        	<p class="col-xs-6 col-lg-6 col-sm-6 col-md-6"><b>Seller's email :</b></p>
+        	<p class="text-primary col-xs-6 col-lg-6 col-sm-6 col-md-6"> {{this.email}}</p>
+        	<p class="col-xs-6 col-lg-6 col-sm-6 col-md-6"><b>Price :</b></p>
+        	<p class="text-success col-xs-6 col-lg-6 col-sm-6 col-md-6"> Rs.{{this.price}}</p>
+        	<p class="col-xs-6 col-lg-6 col-sm-6 col-md-6"><b>Service Description : </b></p>
+        	<p class="text-primary col-xs-6 col-lg-6 col-sm-6 col-md-6">{{this.serviceDesc}}</p>
     		</div>
   			{{/each}}
 		  </div>

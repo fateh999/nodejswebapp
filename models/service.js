@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-// User Schema
+// Service Schema
 var serviceSchema = mongoose.Schema({
 	name: {
 		type: String
